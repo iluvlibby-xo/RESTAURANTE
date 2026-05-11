@@ -1,11 +1,11 @@
-/* =========================
-   FUENTE MODERNA
-========================= */
+/* ===================================
+   GOOGLE FONTS
+=================================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* =========================
+/* ===================================
    CONFIGURACIÓN GENERAL
-========================= */
+=================================== */
 *{
     margin: 0;
     padding: 0;
@@ -18,71 +18,62 @@ html{
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f4f4f4;
     color: #111;
 }
 
-/* =========================
+/* ===================================
    NAVBAR
-========================= */
+=================================== */
 .navbar{
-    background: linear-gradient(90deg, #000000, #1f1f1f);
-    padding: 12px 0;
+    background: linear-gradient(90deg, #000000, #1c1c1c);
+    padding: 15px 0;
 }
 
 .navbar-brand{
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #00d9ff !important;
     letter-spacing: 2px;
 }
 
-/* LOGO */
-.navbar-brand img{
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* LINKS NAVBAR */
 .nav-link{
     color: white !important;
+    font-weight: 500;
     margin-left: 15px;
     transition: 0.3s;
-    font-weight: 500;
 }
 
 .nav-link:hover{
     color: #00d9ff !important;
 }
 
-/* =========================
+/* ===================================
    HERO
-========================= */
+=================================== */
 .hero{
     position: relative;
-    height: 100vh;
+    height: 90vh;
 
-    /* IMAGEN DE FONDO */
     background-image:
     linear-gradient(
-        rgba(0,0,0,0.6),
-        rgba(0,0,0,0.6)
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
     ),
-    url('logo.JPG');
+    url('./logo.JPG');
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     text-align: center;
     color: white;
 }
 
-/* TEXTO HERO */
 .hero h1{
     font-size: 4rem;
     font-weight: 700;
@@ -113,24 +104,26 @@ body{
     transform: scale(1.05);
 }
 
-/* =========================
+/* ===================================
    TITULOS
-========================= */
-h1, h2, h5{
+=================================== */
+h1,h2,h5{
     font-weight: 700;
 }
 
-/* =========================
-   PRODUCTOS
-========================= */
-#productos{
-    scroll-margin-top: 80px;
-    padding-top: 50px;
+/* ===================================
+   SECCIÓN PRODUCTOS
+=================================== */
+#playeras{
+    padding-top: 60px;
 }
 
-/* CARDS */
+/* ===================================
+   CARDS
+=================================== */
 #productos .card{
     height: 100%;
+    min-height: 520px;
     border: none;
     border-radius: 20px;
     overflow: hidden;
@@ -145,9 +138,11 @@ h1, h2, h5{
 
 /* IMÁGENES */
 #productos .card-img-top{
-    height: 280px;
-    object-fit: cover;
     width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 /* BODY CARD */
@@ -155,87 +150,59 @@ h1, h2, h5{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
 }
 
-/* TITULO PRODUCTO */
+/* TITULO */
 .card-title{
-    font-size: 1.1rem;
-    color: #111;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
 }
 
 /* PRECIO */
-.precio{
-    color: #00a86b;
-    font-weight: bold;
-    font-size: 1.2rem;
+.text-success{
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 
-/* BOTÓN PRODUCTO */
-.btn-success{
-    background-color: #111 !important;
-    border: none !important;
+/* BOTÓN PRODUCTOS */
+.btn-dark{
     border-radius: 30px;
-    padding: 10px;
+    padding: 12px;
     font-weight: 600;
     transition: 0.3s;
+    border: none;
+    background-color: #111;
 }
 
-.btn-success:hover{
-    background-color: #00d9ff !important;
-    color: black !important;
+.btn-dark:hover{
+    background-color: #00d9ff;
+    color: black;
 }
 
-/* =========================
+/* ===================================
    CARRITO
-========================= */
-.card#carritocard{
-    max-height: 450px;
-    overflow-y: auto;
-    border-radius: 20px;
-}
-
+=================================== */
 .card-header{
-    background-color: #111 !important;
+    background-color: #000 !important;
     color: white !important;
+    font-size: 1.5rem;
     font-weight: 600;
-    font-size: 1.2rem;
 }
 
-/* BOTÓN ELIMINAR */
+.card-footer{
+    background-color: white;
+}
+
 .btn-danger{
     border-radius: 30px;
-    font-weight: 600;
     padding: 10px 20px;
+    font-weight: 600;
 }
 
-/* =========================
-   ANIMACIONES
-========================= */
-.agregado{
-    background-color: #d4edda !important;
-    color: #111 !important;
-    animation: fade 1s ease-in-out;
-}
-
-.eliminado{
-    background-color: #f8d7da !important;
-    color: #721c24 !important;
-    animation: fade 1s ease-in-out;
-}
-
-@keyframes fade{
-    from{
-        opacity: 0.3;
-    }
-
-    to{
-        opacity: 1;
-    }
-}
-
-/* =========================
+/* ===================================
    OFFCANVAS
-========================= */
+=================================== */
 .offcanvas{
     background-color: #f8f8f8;
 }
@@ -244,41 +211,31 @@ h1, h2, h5{
     font-weight: 700;
 }
 
-/* =========================
+/* ===================================
    FOOTER
-========================= */
-.footer{
-    background: linear-gradient(90deg, #000000, #1a1a1a);
+=================================== */
+footer{
+    background: linear-gradient(90deg,#000000,#1a1a1a);
     color: white;
-    text-align: center;
-    padding: 3rem 2rem;
-    margin-top: 50px;
+    padding: 50px 20px;
 }
 
-.footer h4{
+footer h4{
     color: #00d9ff;
     font-weight: 700;
 }
 
-.footer address{
-    font-style: normal;
-    margin-top: 1rem;
-}
-
-.footer a{
-    color: #fba122;
+footer a{
     text-decoration: none;
     transition: 0.3s;
 }
 
-.footer a:hover{
-    color: #00d9ff;
+footer a:hover{
+    color: #00d9ff !important;
 }
 
 /* REDES */
 .social i{
-    font-size: 2rem;
-    margin: 0 10px;
     transition: 0.3s;
 }
 
@@ -287,9 +244,32 @@ h1, h2, h5{
     color: #00d9ff;
 }
 
-/* =========================
+/* ===================================
+   ANIMACIONES
+=================================== */
+.agregado{
+    background-color: #d4edda !important;
+    animation: fade 1s ease-in-out;
+}
+
+.eliminado{
+    background-color: #f8d7da !important;
+    animation: fade 1s ease-in-out;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0.4;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+/* ===================================
    RESPONSIVE
-========================= */
+=================================== */
 @media(max-width:768px){
 
     .hero h1{
@@ -300,8 +280,12 @@ h1, h2, h5{
         font-size: 1rem;
     }
 
+    #productos .card{
+        min-height: auto;
+    }
+
     #productos .card-img-top{
-        height: 220px;
+        height: 250px;
     }
 
 }
